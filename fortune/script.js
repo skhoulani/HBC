@@ -2,8 +2,8 @@ function revealFortune() {
 
     var d = new Date();
 
-    //Here I am subtracting the current time in milliseconds from the time that the fortune button was clicked. I have hard coded that number because manuall setting a Date object was bugged for some reason. 
-    var quoteNum = Math.floor(Math.abs((d.getTime() - 1480806021656)/84600000)) % 318;
+    //Here I am subtracting the current time in milliseconds from the time that the fortune button was clicked. I have hard coded that number because manuall setting a Date object was bugged for some reason.
+    var quoteNum = Math.floor(Math.abs((d.getTime() - 1480806021656)/84600000)) % 318; // I mod by the number of fortunes I have in the text file
 
     var txtFile = new XMLHttpRequest();
     txtFile.open("GET", "https://skhoulani.github.io/HBC/fortune.txt", true);
@@ -31,6 +31,4 @@ function revealFortune() {
       }
     }
     txtFile.send(null);
-
-
 };
