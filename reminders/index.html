@@ -50,7 +50,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="../index.html">Home</a></li>
+            <li ><a href="../index.html">Home</a></li>
+            <li ><a href="../lrta/index.html">LRTA Schedule</a></li>
+            <li ><a href="../fortune/index.html">Fortune</a></li>
+            <li class="active"><a href="index.html">Reminders</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -61,35 +64,43 @@
             <h1>Here are your daily reminders Samir</h1>
             <p id="par" class="lead">Feel free to add or remove new reminders, too!<br></p>
         </div>
-        <div id="checklist" class="col-md-6">
+        <div class="col-md-6">
             <h2><u>To Do</u></h2>
             <form>
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">History Homework</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">Psychology Project Presentation</label>
-                </div>
-                <div class="checkbox disabled">
-                    <label><input type="checkbox" value="" disabled>Get new shoes</label>
-                </div>
+                <ul id="incomplete">
+                    <!-- <div class="checkbox" >
+                        <label><input type="checkbox" value="">History Homework</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">Psychology Project Presentation</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">Get new shoes</label>
+                    </div> -->
+                </ul>
                 <div class="form-group">
                     <label for="inputReminder">New Reminder</label>
-                    <input type="text" class="form-control" id="inputReminder" placeholder="Enter a new reminder...">
+                    <input type="text" onkeypress="return noenter1(event)" class="form-control" id="inputReminder1" placeholder="Enter a new reminder...">
                 </div>
             </form>
         </div>
-        <div id="completed" class="col-md-6">
-            <h2><u>Completed</u></h2>
+        <div class="col-md-6">
+            <h2><u>Complete</u></h2>
             <form>
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">History Homework</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">Psychology Project Presentation</label>
-                </div>
-                <div class="checkbox disabled">
-                    <label><input type="checkbox" value="" disabled>Get new shoes</label>
+                <ul id="complete">
+                    <!-- <div class="checkbox">
+                        <label><input type="checkbox" value="">History Homework</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">Psychology Project Presentation</label>
+                    </div>
+                    <div class="checkbox disabled">
+                        <label><input type="checkbox" value="">Get new shoes</label>
+                    </div> -->
+                </ul>
+                <div class="form-group">
+                    <label for="inputReminder">Completed Reminder</label>
+                    <input type="text" onkeypress="return noenter2(event)" class="form-control" id="inputReminder2" placeholder="Enter a completed reminder...">
                 </div>
             </form>
         </div>
